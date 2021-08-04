@@ -1,10 +1,10 @@
-#include<iosteram>
+#include<iostream>
 
 using namespace std;
 
 int main()
 {
   cout<<"hero world!"<<endl;
-  system（"pause"）;
+  system("pause");
   return 0;
 }
