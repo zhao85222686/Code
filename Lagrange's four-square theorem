@@ -1,0 +1,44 @@
+#include<iostream>
+#include<math.h>
+using namespace std;
+
+int main() {
+	unsigned int num;
+	cout << "请输入自然数：";
+	cin >> num;
+	for (int i = 0; i <= sqrt(num); i++){
+		for (int j = 0; j <= sqrt(num); j++) {
+			for (int k = 0; k <= sqrt(num); k++) {
+				for (int l = 0; l <= sqrt(num); l++) {
+					if (i*i+j*j+k*k+l*l==num)
+					{
+						if (l != 0)
+						{
+							cout << l << "*" << l;
+						}
+						if (k != 0)
+						{
+							cout << "+" << k << "*" << k;
+						}
+						if (j != 0)
+						{
+							cout << "+" << j << "*" << j;
+						}
+						if (i != 0)
+						{
+							cout << "+" << i << "*" << i;
+						}
+						
+						
+						
+						cout << "=" << num << endl;
+						return 0;
+					}
+				}
+			}
+		}
+	}
+
+
+	return 0;
+}
