@@ -1,0 +1,47 @@
+#include <iostream>
+#include <stdlib.h>
+#include <time.h>
+
+using namespace std;
+
+void menu()
+{
+	cout << "**********************"<< endl;
+	cout << "**欢迎来到猜数字游戏**" << endl;
+	cout << "**********************" << endl;
+}
+
+void game()
+{	
+	int input = 0;
+	int num = 0;
+	num = rand() % 100 + 1;
+	cout << "请猜你的数字从1-100" << endl;
+	while (1)
+	{
+		cin >> input;
+		if (input==num)
+		{
+			cout << "恭喜你答对了" << endl;
+			break;
+		}
+		else if (input>num)
+		{
+			cout << "你猜的数字大了" << endl;
+		}
+		else if (input < num)
+		{
+			cout << "你猜的数字小了" << endl;
+		}
+	}
+
+}
+
+int main()
+{	
+	srand((unsigned int)time(NULL));
+	menu();
+	game();
+
+	return 0;
+}
